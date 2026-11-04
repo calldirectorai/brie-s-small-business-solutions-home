@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calldirectorai.github.io/brie-s-small-business-solutions-home/sitemap.xml
