@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#0E1A33">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E1A33'/%3E%3Ctext x='25' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23EBD49D'%3EB%3C/text%3E%3Crect x='39' y='35' width='4' height='11' fill='%23D4AE62'/%3E%3Crect x='45' y='28' width='4' height='18' fill='%23D4AE62'/%3E%3Crect x='51' y='20' width='4' height='26' fill='%23EBD49D'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pinyon+Script&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --cream:#FBF7EF;--cream-2:#F4EDDF;--white:#FFFFFF;
@@ -23,7 +23,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 button{font:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
@@ -66,7 +66,10 @@ h3{font-size:clamp(21px,1.8vw,25px);line-height:1.2}
 .site-head{position:sticky;top:0;z-index:60;background:#040404;border-bottom:1px solid rgba(212,174,98,.25)}
 .site-head .wrap{display:flex;align-items:center;gap:26px;min-height:78px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
-.brand img{height:62px;width:auto}
+.brand .mark{height:50px;width:auto}
+.wm{display:grid;line-height:1;gap:6px}
+.wm b{font-family:Cinzel,var(--serif);font-weight:700;font-size:25px;letter-spacing:.1em;color:#fff}
+.wm small{font-family:Cinzel,var(--serif);font-weight:600;font-size:10.5px;letter-spacing:.16em;color:var(--gold-lt)}
 .brand-t{display:grid;line-height:1.05}
 .brand-t b{font-family:var(--serif);font-size:22px;color:var(--navy);font-weight:700}
 .brand-t small{font-size:11.5px;letter-spacing:.08em;color:var(--gold);font-weight:700}
@@ -135,7 +138,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .site-foot ul{list-style:none;display:grid;gap:4px}
 .site-foot a{text-decoration:none;display:inline-flex;align-items:center;min-height:34px}
 .site-foot a:hover{color:var(--gold-lt)}
-.site-foot .brand img{height:84px}
+.site-foot .brand img{height:96px;width:auto}
 .foot-base{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#8F9AB4}
 
 /* greeting bubble */
@@ -148,7 +151,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 @media (max-width:900px){.cta-band{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:780px){
   body{font-size:16px}
-  .brand img{height:50px}
+  .brand .mark{height:40px}.wm b{font-size:21px}.wm small{font-size:9px}
   .topbar .tb-l{display:none}.topbar .wrap{justify-content:center}
   .site-head .wrap{flex-wrap:wrap;gap:4px 14px;min-height:0;padding-block:10px 2px}
   .site-head .btn{display:none}
@@ -216,7 +219,7 @@ details p{color:var(--muted);padding-bottom:20px}
 </style></head><body>
 <div class="topbar"><div class="wrap"><span class="tb-l">Free consultation for new and growing businesses. Let's geaux, bestie.</span><span class="tb-r"><a href="mailto:briesbusinesssolutions@gmail.com">briesbusinesssolutions@gmail.com</a><a href="tel:+15044752631">(504) 475-2631</a></span></div></div>
 <header class="site-head"><div class="wrap">
-<a class="brand" href="index.html" aria-label="Brie's Small Business Solutions, home"><img src="images/brie-logo.png" alt="Brie's Small Business Solutions" width="68" height="62"></a>
+<a class="brand" href="index.html" aria-label="Brie's Small Business Solutions, home"><img class="mark" src="images/brie-mark.png" alt="" width="64" height="50"><span class="wm"><b>BRIE’S</b><small>SMALL BUSINESS SOLUTIONS</small></span></a>
 <nav class="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="services.html" aria-current="page">Services</a></li><li><a href="ai-assistant.html">AI Assistant</a></li><li><a href="resources.html">Resources</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
 <a class="btn btn-gold" href="contact.html">Book a consultation</a>
 </div></header>
@@ -265,7 +268,7 @@ details p{color:var(--muted);padding-bottom:20px}
 </main>
 <footer class="site-foot"><div class="wrap">
 <div class="foot-grid">
-<div><a class="brand" href="index.html"><img src="images/brie-logo.png" alt="Brie's Small Business Solutions" width="68" height="62"></a>
+<div><a class="brand" href="index.html" aria-label="Brie's Small Business Solutions, home"><img src="images/brie-logo.png" alt="Brie's Small Business Solutions" width="92" height="84"></a>
 <p style="margin-top:16px;max-width:34ch">Helping entrepreneurs build businesses the right way, with the systems to keep every client.</p>
 <p class="badges"><span>Women-owned</span><span>Black-owned</span></p>
 <div class="socials"><a href="https://www.facebook.com/profile.php?id=61577362222873" target="_blank" rel="noopener" aria-label="Brie's Small Business Solutions on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.8.2-1.3 1.4-1.3H17V2.2C16.7 2.1 15.7 2 14.6 2 12.2 2 10.6 3.4 10.6 6.1V8H8v3.4h2.6V22H14V11.4h2.7L17 8z"/></svg></a><a href="https://www.instagram.com/briessmallbusinesssolutions/" target="_blank" rel="noopener" aria-label="Brie's Small Business Solutions on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></div></div>
