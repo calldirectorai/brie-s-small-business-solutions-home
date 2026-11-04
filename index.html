@@ -208,7 +208,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .float .dot{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--teal),#2B8F86);color:#fff}
 .float b{display:block;font-size:14.5px;color:#0D0D0E}
 .f1{left:-78px;top:58%;animation:bob 6s ease-in-out infinite}
-.f2{right:-86px;top:9%;animation:bob 6s ease-in-out -3s infinite}
+.f2{right:-28px;top:9%;animation:bob 6s ease-in-out -3s infinite}
 @keyframes bob{50%{transform:translateY(-8px)}}
 .hero-in{opacity:0;transform:translateY(12px);animation:rise .55s var(--ease) forwards}
 .d2{animation-delay:.06s}.d3{animation-delay:.12s}.d4{animation-delay:.18s}
@@ -376,7 +376,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 <div id="greet" role="dialog" aria-label="Chat greeting"><button type="button" id="greet-x" aria-label="Dismiss">×</button><b>Need a quick answer?</b><span class="gt">I'm Brie's assistant. Ask me anything about starting or growing your business, or book a free consultation.</span></div>
 <script>
 (function(){var g=document.getElementById('greet'),t,d=false;function s(){g.classList.add('show');clearTimeout(t);t=setTimeout(function(){g.classList.remove('show')},g.dataset.m?6000:15000)}
-var mob=matchMedia('(max-width:780px)').matches;if(mob){g.dataset.m='1'}if(!mob){setTimeout(function(){if(!d)s()},2500)}else if(!/contact/.test(location.pathname)){var fired=0;addEventListener('scroll',function(){if(!fired&&!d&&scrollY>innerHeight*1.1){fired=1;setTimeout(function(){if(!d)s()},1200)}},{passive:true})}document.getElementById('greet-x').addEventListener('click',function(){d=true;clearTimeout(t);g.classList.remove('show')});
+var mob=matchMedia('(max-width:780px)').matches;if(mob){g.dataset.m='1'}var hh=document.querySelector('.hero .portrait-wrap');if(!mob&&!hh){setTimeout(function(){if(!d)s()},2500)}else if(!(mob&&/contact/.test(location.pathname))){var fired=0;addEventListener('scroll',function(){if(hh&&scrollY<innerHeight*.5)g.classList.remove('show');if(!fired&&!d&&scrollY>(hh?innerHeight*.75:innerHeight*1.1)){fired=1;setTimeout(function(){if(!d)s()},1200)}},{passive:true})}document.getElementById('greet-x').addEventListener('click',function(){d=true;clearTimeout(t);g.classList.remove('show')});
 [].forEach.call(document.querySelectorAll('[data-open-chat]'),function(b){b.addEventListener('click',function(e){e.preventDefault();var l=document.querySelector('[id*="paymegpt"] button,[class*="paymegpt"] button,[id*="calldirector"] button,[class*="calldirector"] button');if(l)l.click();else s()})});
 var c=document.getElementById('r-calls');if(c){var r=document.getElementById('r-rate'),v=document.getElementById('r-value'),f=function(n){return '$'+Math.round(n).toLocaleString('en-US')};
 function fill(el){el.style.setProperty('--p',((el.value-el.min)/(el.max-el.min)*100)+'%')}
